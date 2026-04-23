@@ -105,6 +105,8 @@ export const dictionaries = {
       tagline: "Indie Developer · iOS & AI Apps",
       copyright: "Built with Next.js & Tailwind.",
       navigationLabel: "Footer navigation",
+      wechatQrAlt: "WeChat Official Account QR Code",
+      wechatQrLabel: "Follow on WeChat",
     },
     actions: {
       download: "Download",
@@ -197,6 +199,8 @@ export const dictionaries = {
       tagline: "独立开发者 · iOS 与 AI 应用",
       copyright: "使用 Next.js 与 Tailwind 构建。",
       navigationLabel: "页脚导航",
+      wechatQrAlt: "微信公众号二维码",
+      wechatQrLabel: "关注公众号",
     },
     actions: {
       download: "下载",
