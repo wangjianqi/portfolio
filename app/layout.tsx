@@ -5,13 +5,14 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://paladindev.app"),
   title: "Paladin — Indie Developer · iOS, AI & Web Products",
   description:
-    "Indie developer building practical iOS, AI, and web products. Products include VisionDrive dashcam, VIXA dual camera, VoiceLocal on-device transcription, App Review Cases, and more.",
+    "Indie developer building practical iOS, AI, and web products. Products include VisionDrive dashcam, VIXA dual camera, VoiceLocal on-device transcription, App Review Cases, ClearCut, and more.",
   keywords: [
     "indie developer",
     "iOS developer",
     "AI apps",
     "web products",
     "App Store review",
+    "background removal",
     "dashcam app",
     "dual camera",
     "Whisper transcription",

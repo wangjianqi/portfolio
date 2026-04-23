@@ -141,6 +141,31 @@ export const products: Product[] = [
     status: "live",
   },
   {
+    id: "clearcut",
+    name: "ClearCut",
+    content: {
+      en: {
+        tagline: "Remove Image Background Instantly",
+        description:
+          "AI-powered background removal that runs entirely in your browser. No uploads, no accounts, and your images never leave your device.",
+        category: "Image Tool",
+      },
+      zh: {
+        tagline: "浏览器内一键移除图片背景",
+        description:
+          "完全在浏览器本地运行的 AI 图片背景移除工具。无需上传、无需账号，图片不会离开你的设备。",
+        category: "图片工具",
+      },
+    },
+    platform: ["Web", "AI"],
+    websiteUrl: "https://wangjianqi.github.io/clearcut/",
+    gradient: "from-zinc-950 via-fuchsia-950 to-slate-950",
+    accentColor: "#e879f9",
+    glowColor: "rgba(232, 121, 249, 0.18)",
+    icon: "✂️",
+    status: "live",
+  },
+  {
     id: "voicecast",
     name: "VoiceCast",
     content: {
