@@ -1,4 +1,11 @@
-export default function Footer() {
+import type { Dictionary } from "@/lib/i18n";
+
+interface FooterProps {
+  footer: Dictionary["footer"];
+  nav: Dictionary["nav"];
+}
+
+export default function Footer({ footer, nav }: FooterProps) {
   const year = new Date().getFullYear();
 
   return (
@@ -16,16 +23,16 @@ export default function Footer() {
             className="text-xs text-white/30"
             style={{ fontFamily: "DM Sans, sans-serif" }}
           >
-            Indie Developer · iOS &amp; AI Apps
+            {footer.tagline}
           </p>
         </div>
 
         {/* Links */}
-        <nav className="flex gap-6" aria-label="Footer navigation">
+        <nav className="flex gap-6" aria-label={footer.navigationLabel}>
           {[
-            { label: "Products", href: "#products" },
-            { label: "Featured", href: "#featured" },
-            { label: "About", href: "#about" },
+            { label: nav.products, href: "#products" },
+            { label: nav.featured, href: "#featured" },
+            { label: nav.about, href: "#about" },
           ].map((link) => (
             <a
               key={link.href}
@@ -43,7 +50,7 @@ export default function Footer() {
           className="text-xs text-white/20"
           style={{ fontFamily: "DM Sans, sans-serif" }}
         >
-          © {year} Paladin. Built with Next.js &amp; Tailwind.
+          © {year} Paladin. {footer.copyright}
         </p>
       </div>
     </footer>

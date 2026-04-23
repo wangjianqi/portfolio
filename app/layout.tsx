@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
+import { isLocale } from "@/lib/i18n";
 import "./globals.css";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://paladindev.app"),
   title: "Paladin — Indie Developer · iOS & AI Apps",
   description:
     "Indie developer building practical iOS and AI-powered apps. Products include VisionDrive dashcam, VIXA dual camera, VoiceLocal on-device transcription, and more.",
@@ -53,13 +55,23 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
+  params,
 }: Readonly<{
   children: React.ReactNode;
+  params?: Promise<{
+    locale?: string;
+  }>;
 }>) {
+  const resolvedParams = await params;
+  const locale =
+    resolvedParams?.locale && isLocale(resolvedParams.locale)
+      ? resolvedParams.locale
+      : "en";
+
   return (
-    <html lang="en" className="dark">
+    <html lang={locale === "zh" ? "zh-CN" : "en"} className="dark">
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link

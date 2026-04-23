@@ -1,15 +1,13 @@
 "use client";
 
 import { useEffect, useRef } from "react";
+import type { Dictionary } from "@/lib/i18n";
 
-const stats = [
-  { value: "4+", label: "Apps Shipped" },
-  { value: "iOS", label: "Native" },
-  { value: "AI", label: "Powered" },
-  { value: "2024", label: "Active" },
-];
+interface HeroProps {
+  hero: Dictionary["hero"];
+}
 
-export default function Hero() {
+export default function Hero({ hero }: HeroProps) {
   const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -49,7 +47,7 @@ export default function Hero() {
           style={{ opacity: 0 }}
         >
           <span className="w-6 h-px bg-[#4F8EF7]" />
-          Indie Developer
+          {hero.label}
           <span className="w-6 h-px bg-[#4F8EF7]" />
         </div>
 
@@ -62,11 +60,11 @@ export default function Hero() {
             fontWeight: 800,
           }}
         >
-          Building
+          {hero.titleTop}
           <br />
-          <span className="gradient-text">Practical AI</span>
+          <span className="gradient-text">{hero.titleHighlight}</span>
           <br />
-          &amp; Utility Apps
+          {hero.titleBottom}
         </h1>
 
         {/* Sub */}
@@ -74,8 +72,7 @@ export default function Hero() {
           className="hero-item animate-fade-up max-w-md text-white/50 text-lg leading-relaxed mb-12"
           style={{ opacity: 0, fontFamily: "DM Sans, sans-serif" }}
         >
-          Shipping iOS and AI-powered tools that solve real problems — built
-          with Swift, on-device intelligence, and obsessive attention to detail.
+          {hero.description}
         </p>
 
         {/* CTAs */}
@@ -84,7 +81,7 @@ export default function Hero() {
           style={{ opacity: 0 }}
         >
           <a href="#products" className="btn-primary">
-            View Products
+            {hero.primaryCta}
             <svg
               width="14"
               height="14"
@@ -98,7 +95,7 @@ export default function Hero() {
             </svg>
           </a>
           <a href="#about" className="btn-secondary">
-            About Me
+            {hero.secondaryCta}
           </a>
         </div>
 
@@ -107,7 +104,7 @@ export default function Hero() {
           className="hero-item animate-fade-up grid grid-cols-2 md:grid-cols-4 gap-px border border-white/[0.06] rounded-2xl overflow-hidden"
           style={{ opacity: 0 }}
         >
-          {stats.map((stat, i) => (
+          {hero.stats.map((stat, i) => (
             <div
               key={i}
               className="bg-white/[0.02] hover:bg-white/[0.04] transition-colors px-6 py-5"
@@ -127,7 +124,7 @@ export default function Hero() {
       {/* Scroll indicator */}
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-pulse-slow">
         <div className="w-px h-8 bg-gradient-to-b from-transparent to-white/20" />
-        <span className="section-label text-[10px]">Scroll</span>
+        <span className="section-label text-[10px]">{hero.scroll}</span>
       </div>
     </section>
   );

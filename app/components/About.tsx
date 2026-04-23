@@ -1,3 +1,5 @@
+import type { Dictionary } from "@/lib/i18n";
+
 const skills = [
   { label: "iOS / Swift", level: 95 },
   { label: "Flutter", level: 75 },
@@ -6,25 +8,11 @@ const skills = [
   { label: "Next.js", level: 80 },
 ];
 
-const principles = [
-  {
-    icon: "◈",
-    title: "Solve your own problems",
-    desc: "Every app I ship solves something I personally experienced. No solution in search of a problem.",
-  },
-  {
-    icon: "◉",
-    title: "Restraint as design",
-    desc: "Less surface, deeper utility. I cut features until something essential remains.",
-  },
-  {
-    icon: "◌",
-    title: "Offline-first",
-    desc: "Privacy and speed aren't trade-offs. On-device intelligence should be the default.",
-  },
-];
+interface AboutProps {
+  about: Dictionary["about"];
+}
 
-export default function About() {
+export default function About({ about }: AboutProps) {
   return (
     <section id="about" className="relative py-32 px-6 overflow-hidden">
       {/* Divider line */}
@@ -34,35 +22,23 @@ export default function About() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
           {/* Left — bio */}
           <div>
-            <div className="section-label mb-6">About</div>
+            <div className="section-label mb-6">{about.label}</div>
             <h2
               className="font-syne font-700 text-4xl md:text-5xl text-white leading-tight mb-8"
               style={{ fontFamily: "Syne, sans-serif", fontWeight: 700 }}
             >
-              Indie Developer.
+              {about.titleTop}
               <br />
-              <span className="text-white/30">Builder. Cyclist.</span>
+              <span className="text-white/30">{about.titleBottom}</span>
             </h2>
 
             <div
               className="space-y-5 text-white/50 leading-relaxed"
               style={{ fontFamily: "DM Sans, sans-serif" }}
             >
-              <p>
-                I build iOS and AI-powered apps that solve real, personally
-                experienced problems. My stack spans Swift, Flutter, on-device
-                ML, and backend services — but the philosophy stays constant:
-                ship something useful, keep it minimal.
-              </p>
-              <p>
-                The VisionDrive dashcam app started on a cycling route through
-                Hangzhou. I needed something that didn&apos;t exist, so I built
-                it. That&apos;s the pattern I keep returning to.
-              </p>
-              <p>
-                I also write about AI and technology in Chinese for a developer
-                audience — long-form, technically honest, without the hype.
-              </p>
+              {about.paragraphs.map((paragraph) => (
+                <p key={paragraph}>{paragraph}</p>
+              ))}
             </div>
 
             {/* Stack badges */}
@@ -93,7 +69,7 @@ export default function About() {
           <div className="space-y-8">
             {/* Principles */}
             <div className="space-y-4">
-              {principles.map((p) => (
+              {about.principles.map((p) => (
                 <div
                   key={p.title}
                   className="glass-card rounded-2xl p-5 hover:bg-white/[0.05] transition-colors"
@@ -130,13 +106,13 @@ export default function About() {
             {/* Skill bars */}
             <div
               className="glass-card rounded-2xl p-6 space-y-5"
-              aria-label="Skills"
+              aria-label={about.skillsAriaLabel}
             >
               <div
                 className="section-label text-[10px] mb-2"
                 aria-hidden="true"
               >
-                Stack Proficiency
+                {about.stackLabel}
               </div>
               {skills.map((skill) => (
                 <div key={skill.label}>
