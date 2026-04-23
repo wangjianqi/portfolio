@@ -116,6 +116,31 @@ export const products: Product[] = [
     status: "beta",
   },
   {
+    id: "app-review-cases",
+    name: "App Review Cases",
+    content: {
+      en: {
+        tagline: "Real App Store Review Cases",
+        description:
+          "A structured library of real Apple App Store review rejection cases. Browse by guideline, learn from real outcomes, and contribute your own experience.",
+        category: "Developer Tool",
+      },
+      zh: {
+        tagline: "真实 App Store 审核案例库",
+        description:
+          "结构化整理真实的 Apple App Store 审核拒审案例。按审核指南浏览，学习真实处理结果，也可以提交自己的经历。",
+        category: "开发者工具",
+      },
+    },
+    platform: ["Web"],
+    websiteUrl: "https://appreview.yuechuanai.cn/",
+    gradient: "from-zinc-950 via-sky-950 to-slate-950",
+    accentColor: "#0ea5e9",
+    glowColor: "rgba(14, 165, 233, 0.18)",
+    icon: "📋",
+    status: "live",
+  },
+  {
     id: "voicecast",
     name: "VoiceCast",
     content: {

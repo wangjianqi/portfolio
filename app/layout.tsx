@@ -3,13 +3,15 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://paladindev.app"),
-  title: "Paladin — Indie Developer · iOS & AI Apps",
+  title: "Paladin — Indie Developer · iOS, AI & Web Products",
   description:
-    "Indie developer building practical iOS and AI-powered apps. Products include VisionDrive dashcam, VIXA dual camera, VoiceLocal on-device transcription, and more.",
+    "Indie developer building practical iOS, AI, and web products. Products include VisionDrive dashcam, VIXA dual camera, VoiceLocal on-device transcription, App Review Cases, and more.",
   keywords: [
     "indie developer",
     "iOS developer",
     "AI apps",
+    "web products",
+    "App Store review",
     "dashcam app",
     "dual camera",
     "Whisper transcription",
@@ -21,9 +23,9 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://paladindev.app",
-    title: "Paladin — Indie Developer · iOS & AI Apps",
+    title: "Paladin — Indie Developer · iOS, AI & Web Products",
     description:
-      "Building practical AI & utility apps for iOS. Minimalist design, offline-first architecture.",
+      "Building practical AI, utility, and developer products. Minimalist design, offline-first architecture where it matters.",
     siteName: "Paladin Dev",
     images: [
       {
@@ -36,9 +38,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Paladin — Indie Developer · iOS & AI Apps",
+    title: "Paladin — Indie Developer · iOS, AI & Web Products",
     description:
-      "Building practical AI & utility apps for iOS. Minimalist design, offline-first architecture.",
+      "Building practical AI, utility, and developer products. Minimalist design, offline-first architecture where it matters.",
     images: ["/og-image.png"],
   },
   robots: {
