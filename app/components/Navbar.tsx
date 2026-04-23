@@ -11,6 +11,7 @@ interface NavbarProps {
 export default function Navbar({ locale, nav }: NavbarProps) {
   const [scrolled, setScrolled] = useState(false);
   const nextLocale = locale === "en" ? "zh" : "en";
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
@@ -57,7 +58,7 @@ export default function Navbar({ locale, nav }: NavbarProps) {
         {/* CTA */}
         <div className="flex items-center gap-2">
           <a
-            href={`/${nextLocale}`}
+            href={`${basePath}/${nextLocale}`}
             aria-label={nav.languageAriaLabel}
             className="btn-secondary text-xs"
           >

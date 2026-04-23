@@ -12,6 +12,8 @@ interface FooterProps {
 export default function Footer({ footer, nav }: FooterProps) {
   const year = new Date().getFullYear();
   const [showQrCode, setShowQrCode] = useState(false);
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
+  const wechatQrSrc = `${basePath}/images/wechat-qr.png`;
 
   return (
     <footer className="relative border-t border-white/[0.06] py-16 px-6">
@@ -47,7 +49,7 @@ export default function Footer({ footer, nav }: FooterProps) {
             >
               <div className="relative w-12 h-12 rounded-lg overflow-hidden bg-white/5 border border-white/10 cursor-pointer hover:border-white/30 transition-colors">
                 <Image
-                  src="/images/wechat-qr.png"
+                  src={wechatQrSrc}
                   alt={footer.wechatQrAlt || "WeChat Official Account QR Code"}
                   fill
                   className="object-contain p-1"
@@ -66,7 +68,7 @@ export default function Footer({ footer, nav }: FooterProps) {
                   <div className="relative bg-white rounded-xl p-3 shadow-2xl border border-white/20">
                     <div className="relative w-40 h-40">
                       <Image
-                        src="/images/wechat-qr.png"
+                        src={wechatQrSrc}
                         alt={footer.wechatQrAlt || "WeChat Official Account QR Code"}
                         fill
                         className="object-contain"
