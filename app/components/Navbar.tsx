@@ -26,7 +26,7 @@ export default function Navbar() {
           className="font-syne font-700 text-lg tracking-tight text-white hover:text-white/80 transition-colors"
           style={{ fontFamily: "Syne, sans-serif", fontWeight: 700 }}
         >
-          jack<span className="text-[#4F8EF7]">.</span>dev
+          paladin<span className="text-[#4F8EF7]">.</span>dev
         </a>
 
         {/* Nav links */}

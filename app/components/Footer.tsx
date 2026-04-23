@@ -10,7 +10,7 @@ export default function Footer() {
             className="font-syne font-700 text-lg text-white mb-1"
             style={{ fontFamily: "Syne, sans-serif", fontWeight: 700 }}
           >
-            jack<span className="text-[#4F8EF7]">.</span>dev
+            paladin<span className="text-[#4F8EF7]">.</span>dev
           </div>
           <p
             className="text-xs text-white/30"
@@ -43,7 +43,7 @@ export default function Footer() {
           className="text-xs text-white/20"
           style={{ fontFamily: "DM Sans, sans-serif" }}
         >
-          © {year} Jack. Built with Next.js &amp; Tailwind.
+          © {year} Paladin. Built with Next.js &amp; Tailwind.
         </p>
       </div>
     </footer>

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Jack — Indie Developer · iOS & AI Apps",
+  title: "Paladin — Indie Developer · iOS & AI Apps",
   description:
     "Indie developer building practical iOS and AI-powered apps. Products include VisionDrive dashcam, VIXA dual camera, VoiceLocal on-device transcription, and more.",
   keywords: [
@@ -15,27 +15,27 @@ export const metadata: Metadata = {
     "Swift",
     "Flutter",
   ],
-  authors: [{ name: "Jack" }],
+  authors: [{ name: "Paladin" }],
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://jackdev.app",
-    title: "Jack — Indie Developer · iOS & AI Apps",
+    url: "https://paladindev.app",
+    title: "Paladin — Indie Developer · iOS & AI Apps",
     description:
       "Building practical AI & utility apps for iOS. Minimalist design, offline-first architecture.",
-    siteName: "Jack Dev",
+    siteName: "Paladin Dev",
     images: [
       {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Jack — Indie Developer",
+        alt: "Paladin — Indie Developer",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Jack — Indie Developer · iOS & AI Apps",
+    title: "Paladin — Indie Developer · iOS & AI Apps",
     description:
       "Building practical AI & utility apps for iOS. Minimalist design, offline-first architecture.",
     images: ["/og-image.png"],
