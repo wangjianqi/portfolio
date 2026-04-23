@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { isLocale } from "@/lib/i18n";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -55,23 +54,13 @@ export const metadata: Metadata = {
   },
 };
 
-export default async function RootLayout({
+export default function RootLayout({
   children,
-  params,
 }: Readonly<{
   children: React.ReactNode;
-  params?: Promise<{
-    locale?: string;
-  }>;
 }>) {
-  const resolvedParams = await params;
-  const locale =
-    resolvedParams?.locale && isLocale(resolvedParams.locale)
-      ? resolvedParams.locale
-      : "en";
-
   return (
-    <html lang={locale === "zh" ? "zh-CN" : "en"} className="dark">
+    <html lang="en" className="dark">
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link

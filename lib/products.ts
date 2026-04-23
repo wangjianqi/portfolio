@@ -13,7 +13,7 @@ export interface Product {
   >;
   platform: ("iOS" | "Web" | "AI")[];
   featured?: boolean;
-  appStoreUrl?: string;
+  appStoreUrls?: Partial<Record<Locale, string>>;
   websiteUrl?: string;
   githubUrl?: string;
   gradient: string;
@@ -23,7 +23,10 @@ export interface Product {
   status: "live" | "beta" | "in-development";
 }
 
-export type LocalizedProduct = Omit<Product, "content"> & Product["content"][Locale];
+export type LocalizedProduct = Omit<Product, "content" | "appStoreUrls"> &
+  Product["content"][Locale] & {
+    appStoreUrl?: string;
+  };
 
 export const products: Product[] = [
   {
@@ -45,7 +48,10 @@ export const products: Product[] = [
     },
     platform: ["iOS"],
     featured: true,
-    appStoreUrl: "https://apps.apple.com/cn/app/vixa-%E5%8F%8C%E6%91%84%E7%9B%B8%E6%9C%BA/id6761092933",
+    appStoreUrls: {
+      zh: "https://apps.apple.com/cn/app/vixa-%E5%8F%8C%E6%91%84%E7%9B%B8%E6%9C%BA/id6761092933",
+      en: "https://apps.apple.com/us/app/vixa-dual-camera/id6761092933",
+    },
     gradient: "from-violet-950 via-indigo-950 to-slate-950",
     accentColor: "#818cf8",
     glowColor: "rgba(129, 140, 248, 0.2)",
@@ -71,7 +77,10 @@ export const products: Product[] = [
     },
     platform: ["iOS", "AI"],
     featured: true,
-    appStoreUrl: "https://apps.apple.com/us/app/visiondrive-dash-cam/id6760873310",
+    appStoreUrls: {
+      zh: "https://apps.apple.com/cn/app/id6760873310",
+      en: "https://apps.apple.com/us/app/visiondrive-dash-cam/id6760873310",
+    },
     gradient: "from-slate-950 via-cyan-950 to-slate-950",
     accentColor: "#22d3ee",
     glowColor: "rgba(34, 211, 238, 0.18)",
@@ -96,7 +105,10 @@ export const products: Product[] = [
       },
     },
     platform: ["iOS", "AI"],
-    appStoreUrl: "#",
+    appStoreUrls: {
+      en: "#",
+      zh: "#",
+    },
     gradient: "from-blue-950 via-sky-950 to-slate-950",
     accentColor: "#60a5fa",
     glowColor: "rgba(96, 165, 250, 0.18)",
@@ -132,9 +144,10 @@ export const products: Product[] = [
 export const featuredProducts = products.filter((p) => p.featured);
 
 export function getLocalizedProducts(locale: Locale): LocalizedProduct[] {
-  return products.map(({ content, ...product }) => ({
+  return products.map(({ content, appStoreUrls, ...product }) => ({
     ...product,
     ...content[locale],
+    appStoreUrl: appStoreUrls?.[locale] ?? appStoreUrls?.en,
   }));
 }
 

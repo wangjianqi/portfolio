@@ -1,5 +1,6 @@
 import { notFound } from "next/navigation";
 import About from "../components/About";
+import DocumentLanguage from "../components/DocumentLanguage";
 import Featured from "../components/Featured";
 import Footer from "../components/Footer";
 import Hero from "../components/Hero";
@@ -29,6 +30,7 @@ export default async function LocalePage({ params }: LocalePageProps) {
 
   return (
     <main className="min-h-screen bg-[#080808]">
+      <DocumentLanguage locale={locale} />
       <Navbar locale={locale} nav={dictionary.nav} />
       <Hero hero={dictionary.hero} />
       <ProductGrid
