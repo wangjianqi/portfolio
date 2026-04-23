@@ -32,7 +32,7 @@ export const dictionaries = {
     metadata: {
       title: "Paladin - Indie Developer · iOS & AI Apps",
       description:
-        "Indie developer building practical iOS, AI, and web products. Products include VisionDrive dashcam, VIXA dual camera, VoiceLocal on-device transcription, App Review Cases, ClearCut, and more.",
+        "Indie developer building practical iOS, AI, and web products. Products include VisionDrive dashcam, VIXA dual camera, VoiceLocal, App Review Cases, ClearCut, AI读心术, 星轨人格测试, and more.",
       ogDescription:
         "Building practical AI, utility, and developer products. Minimalist design, offline-first architecture where it matters.",
       imageAlt: "Paladin - Indie Developer",
@@ -57,7 +57,7 @@ export const dictionaries = {
       secondaryCta: "About Me",
       scroll: "Scroll",
       stats: [
-        { value: "6+", label: "Products Shipped" },
+        { value: "8+", label: "Products Shipped" },
         { value: "iOS", label: "Native" },
         { value: "AI", label: "Powered" },
         { value: "2024", label: "Active" },
@@ -126,7 +126,7 @@ export const dictionaries = {
     metadata: {
       title: "Paladin - 独立开发者 · iOS 与 AI 应用",
       description:
-        "独立开发者，构建实用的 iOS、AI 与 Web 产品。作品包括 VisionDrive 行车记录仪、VIXA 双摄相机、VoiceLocal 端侧转录、App Review Cases、ClearCut 等。",
+        "独立开发者，构建实用的 iOS、AI 与 Web 产品。作品包括 VisionDrive 行车记录仪、VIXA 双摄相机、VoiceLocal、App Review Cases、ClearCut、AI读心术、星轨人格测试等。",
       ogDescription:
         "构建实用的 AI、效率工具与开发者产品，专注克制设计和必要场景下的离线优先架构。",
       imageAlt: "Paladin - 独立开发者",
@@ -151,7 +151,7 @@ export const dictionaries = {
       secondaryCta: "关于我",
       scroll: "向下",
       stats: [
-        { value: "6+", label: "已发布产品" },
+        { value: "8+", label: "已发布产品" },
         { value: "iOS", label: "原生开发" },
         { value: "AI", label: "智能能力" },
         { value: "2024", label: "持续活跃" },

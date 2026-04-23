@@ -166,6 +166,56 @@ export const products: Product[] = [
     status: "live",
   },
   {
+    id: "ai-mind-reader",
+    name: "AI读心术",
+    content: {
+      en: {
+        tagline: "A Playful AI Mind Reading Game",
+        description:
+          "A lightweight web experience built around a playful AI mind reading interaction. Designed as a fast, shareable browser-based entertainment product.",
+        category: "AI Game",
+      },
+      zh: {
+        tagline: "一个好玩的 AI 读心小游戏",
+        description:
+          "围绕 AI 读心互动设计的轻量级 Web 体验，适合作为快速打开、轻松分享的浏览器娱乐产品。",
+        category: "AI 游戏",
+      },
+    },
+    platform: ["Web", "AI"],
+    websiteUrl: "https://mind.yuechuanai.cn/",
+    gradient: "from-slate-950 via-purple-950 to-zinc-950",
+    accentColor: "#a78bfa",
+    glowColor: "rgba(167, 139, 250, 0.18)",
+    icon: "🔮",
+    status: "live",
+  },
+  {
+    id: "startrail-personality",
+    name: "星轨人格测试",
+    content: {
+      en: {
+        tagline: "Discover Your Startrail Type",
+        description:
+          "An original personality quiz with 16 playful types, 24 everyday questions, and a quick result flow for casual self-reflection and sharing.",
+        category: "Personality Test",
+      },
+      zh: {
+        tagline: "发现你的星轨类型",
+        description:
+          "16 种原创人格类型，24 道生活化问题，约 3 分钟完成。一个面向娱乐、自我观察和分享的人格测试产品。",
+        category: "人格测试",
+      },
+    },
+    platform: ["Web"],
+    websiteUrl: "https://sbti.yuechuanai.cn/",
+    gradient: "from-slate-950 via-amber-950 to-violet-950",
+    accentColor: "#f59e0b",
+    glowColor: "rgba(245, 158, 11, 0.18)",
+    icon: "✨",
+    status: "live",
+  },
+  {
     id: "voicecast",
     name: "VoiceCast",
     content: {
