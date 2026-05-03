@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "deploy": "npm run build && echo '✅ Build complete. Push to main branch to trigger GitHub Pages deployment.'"
+    "deploy": "npm run build && git add . && git commit -m 'deploy' && git push origin main"
   },
   "dependencies": {
     "next": "15.1.0",
