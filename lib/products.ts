@@ -239,6 +239,31 @@ export const products: Product[] = [
     icon: "🎤",
     status: "in-development",
   },
+  {
+    id: "appiconlab",
+    name: "AppIconLab",
+    content: {
+      en: {
+        tagline: "Beautiful App Icons in Seconds",
+        description:
+          "Generate iOS and Android app icons from letters, images, or AI prompts. 50 built-in templates, fully private browser-based editing, export 1024×1024 PNGs instantly.",
+        category: "Developer Tool",
+      },
+      zh: {
+        tagline: "数秒生成精美应用图标",
+        description:
+          "从文字、图片或 AI 提示词生成 iOS 和 Android 应用图标。50 款内置模板，完全私密的浏览器端编辑，即时导出 1024×1024 PNG。",
+        category: "开发者工具",
+      },
+    },
+    platform: ["Web", "AI"],
+    websiteUrl: "https://appiconlab.pages.dev",
+    gradient: "from-indigo-950 via-violet-950 to-slate-950",
+    accentColor: "#8b5cf6",
+    glowColor: "rgba(139, 92, 246, 0.18)",
+    icon: "🎨",
+    status: "live",
+  },
 ];
 
 export const featuredProducts = products.filter((p) => p.featured);
