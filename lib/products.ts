@@ -91,6 +91,34 @@ export const products: Product[] = [
 
   // Other iOS Apps
   {
+    id: "faceblur",
+    name: "FaceBlur Pro",
+    content: {
+      en: {
+        tagline: "AI-Powered Face Blur & Privacy",
+        description:
+          "Automatically detect and blur faces in photos and videos. Protect privacy with intelligent face detection, adjustable blur intensity, and batch processing.",
+        category: "Privacy",
+      },
+      zh: {
+        tagline: "AI 智能人脸打码",
+        description:
+          "自动检测并模糊照片中的人脸。基于智能人脸识别技术，支持可调节模糊强度和批量处理，轻松保护隐私。",
+        category: "隐私",
+      },
+    },
+    platform: ["iOS", "AI"],
+    appStoreUrls: {
+      en: "https://apps.apple.com/us/app/faceblur-pro/id6762071156",
+      zh: "https://apps.apple.com/us/app/faceblur-pro/id6762071156",
+    },
+    gradient: "from-emerald-950 via-teal-950 to-slate-950",
+    accentColor: "#14b8a6",
+    glowColor: "rgba(20, 184, 166, 0.18)",
+    icon: "😶‍🌫️",
+    status: "live",
+  },
+  {
     id: "voicelocal",
     name: "VoiceLocal",
     content: {
