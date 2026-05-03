@@ -264,6 +264,31 @@ export const products: Product[] = [
     icon: "🎨",
     status: "live",
   },
+  {
+    id: "app-store-screenshot-designer",
+    name: "App Store Screenshot Designer",
+    content: {
+      en: {
+        tagline: "Design App Store Screenshots in Browser",
+        description:
+          "Upload screenshots, pick a template, edit text and layouts, then export App Store-ready images. 5 built-in templates, Fabric.js Canvas editor, export PNG + ZIP in all required sizes.",
+        category: "Developer Tool",
+      },
+      zh: {
+        tagline: "浏览器内设计 App Store 截图",
+        description:
+          "上传截图、选择模板、编辑文字和布局，然后导出 App Store 标准尺寸图片。5 款内置模板，Fabric.js 画布编辑器，导出 PNG + ZIP 所有必需尺寸。",
+        category: "开发者工具",
+      },
+    },
+    platform: ["Web"],
+    websiteUrl: "https://app-store-screenshot-designer.pages.dev",
+    gradient: "from-rose-950 via-pink-950 to-slate-950",
+    accentColor: "#f472b6",
+    glowColor: "rgba(244, 114, 182, 0.18)",
+    icon: "📱",
+    status: "live",
+  },
 ];
 
 export const featuredProducts = products.filter((p) => p.featured);
