@@ -29,6 +29,7 @@ export type LocalizedProduct = Omit<Product, "content" | "appStoreUrls"> &
   };
 
 export const products: Product[] = [
+  // Featured iOS Apps
   {
     id: "vixa",
     name: "VIXA",
@@ -87,6 +88,8 @@ export const products: Product[] = [
     icon: "🚗",
     status: "live",
   },
+
+  // Other iOS Apps
   {
     id: "voicelocal",
     name: "VoiceLocal",
@@ -116,6 +119,82 @@ export const products: Product[] = [
     status: "beta",
   },
   {
+    id: "voicecast",
+    name: "VoiceCast",
+    content: {
+      en: {
+        tagline: "Voice to Multi-Platform Content",
+        description:
+          "Speak your ideas and get platform-ready content for WeChat, Xiaohongshu, Douyin, and more. A voice-first AI content engine for modern creators.",
+        category: "AI",
+      },
+      zh: {
+        tagline: "用语音生成多平台内容",
+        description:
+          "说出想法，即可获得适配微信、小红书、抖音等平台的内容草稿。为现代创作者设计的语音优先 AI 内容引擎。",
+        category: "AI",
+      },
+    },
+    platform: ["iOS", "AI"],
+    gradient: "from-orange-950 via-amber-950 to-slate-950",
+    accentColor: "#fb923c",
+    glowColor: "rgba(251, 146, 60, 0.18)",
+    icon: "🎤",
+    status: "in-development",
+  },
+
+  // Developer Tools
+  {
+    id: "appiconlab",
+    name: "AppIconLab",
+    content: {
+      en: {
+        tagline: "Beautiful App Icons in Seconds",
+        description:
+          "Generate iOS and Android app icons from letters, images, or AI prompts. 50 built-in templates, fully private browser-based editing, export 1024×1024 PNGs instantly.",
+        category: "Developer Tool",
+      },
+      zh: {
+        tagline: "数秒生成精美应用图标",
+        description:
+          "从文字、图片或 AI 提示词生成 iOS 和 Android 应用图标。50 款内置模板，完全私密的浏览器端编辑，即时导出 1024×1024 PNG。",
+        category: "开发者工具",
+      },
+    },
+    platform: ["Web", "AI"],
+    websiteUrl: "https://appiconlab.pages.dev",
+    gradient: "from-indigo-950 via-violet-950 to-slate-950",
+    accentColor: "#8b5cf6",
+    glowColor: "rgba(139, 92, 246, 0.18)",
+    icon: "🎨",
+    status: "live",
+  },
+  {
+    id: "app-store-screenshot-designer",
+    name: "App Store Screenshot Designer",
+    content: {
+      en: {
+        tagline: "Design App Store Screenshots in Browser",
+        description:
+          "Upload screenshots, pick a template, edit text and layouts, then export App Store-ready images. 5 built-in templates, Fabric.js Canvas editor, export PNG + ZIP in all required sizes.",
+        category: "Developer Tool",
+      },
+      zh: {
+        tagline: "浏览器内设计 App Store 截图",
+        description:
+          "上传截图、选择模板、编辑文字和布局，然后导出 App Store 标准尺寸图片。5 款内置模板，Fabric.js 画布编辑器，导出 PNG + ZIP 所有必需尺寸。",
+        category: "开发者工具",
+      },
+    },
+    platform: ["Web"],
+    websiteUrl: "https://app-store-screenshot-designer.pages.dev",
+    gradient: "from-rose-950 via-pink-950 to-slate-950",
+    accentColor: "#f472b6",
+    glowColor: "rgba(244, 114, 182, 0.18)",
+    icon: "📱",
+    status: "live",
+  },
+  {
     id: "app-review-cases",
     name: "App Review Cases",
     content: {
@@ -140,6 +219,8 @@ export const products: Product[] = [
     icon: "📋",
     status: "live",
   },
+
+  // AI & Image Tools
   {
     id: "clearcut",
     name: "ClearCut",
@@ -190,6 +271,8 @@ export const products: Product[] = [
     icon: "🔮",
     status: "live",
   },
+
+  // Entertainment
   {
     id: "startrail-personality",
     name: "星轨人格测试",
@@ -213,80 +296,6 @@ export const products: Product[] = [
     accentColor: "#f59e0b",
     glowColor: "rgba(245, 158, 11, 0.18)",
     icon: "✨",
-    status: "live",
-  },
-  {
-    id: "voicecast",
-    name: "VoiceCast",
-    content: {
-      en: {
-        tagline: "Voice to Multi-Platform Content",
-        description:
-          "Speak your ideas and get platform-ready content for WeChat, Xiaohongshu, Douyin, and more. A voice-first AI content engine for modern creators.",
-        category: "AI",
-      },
-      zh: {
-        tagline: "用语音生成多平台内容",
-        description:
-          "说出想法，即可获得适配微信、小红书、抖音等平台的内容草稿。为现代创作者设计的语音优先 AI 内容引擎。",
-        category: "AI",
-      },
-    },
-    platform: ["iOS", "AI"],
-    gradient: "from-orange-950 via-amber-950 to-slate-950",
-    accentColor: "#fb923c",
-    glowColor: "rgba(251, 146, 60, 0.18)",
-    icon: "🎤",
-    status: "in-development",
-  },
-  {
-    id: "appiconlab",
-    name: "AppIconLab",
-    content: {
-      en: {
-        tagline: "Beautiful App Icons in Seconds",
-        description:
-          "Generate iOS and Android app icons from letters, images, or AI prompts. 50 built-in templates, fully private browser-based editing, export 1024×1024 PNGs instantly.",
-        category: "Developer Tool",
-      },
-      zh: {
-        tagline: "数秒生成精美应用图标",
-        description:
-          "从文字、图片或 AI 提示词生成 iOS 和 Android 应用图标。50 款内置模板，完全私密的浏览器端编辑，即时导出 1024×1024 PNG。",
-        category: "开发者工具",
-      },
-    },
-    platform: ["Web", "AI"],
-    websiteUrl: "https://appiconlab.pages.dev",
-    gradient: "from-indigo-950 via-violet-950 to-slate-950",
-    accentColor: "#8b5cf6",
-    glowColor: "rgba(139, 92, 246, 0.18)",
-    icon: "🎨",
-    status: "live",
-  },
-  {
-    id: "app-store-screenshot-designer",
-    name: "App Store Screenshot Designer",
-    content: {
-      en: {
-        tagline: "Design App Store Screenshots in Browser",
-        description:
-          "Upload screenshots, pick a template, edit text and layouts, then export App Store-ready images. 5 built-in templates, Fabric.js Canvas editor, export PNG + ZIP in all required sizes.",
-        category: "Developer Tool",
-      },
-      zh: {
-        tagline: "浏览器内设计 App Store 截图",
-        description:
-          "上传截图、选择模板、编辑文字和布局，然后导出 App Store 标准尺寸图片。5 款内置模板，Fabric.js 画布编辑器，导出 PNG + ZIP 所有必需尺寸。",
-        category: "开发者工具",
-      },
-    },
-    platform: ["Web"],
-    websiteUrl: "https://app-store-screenshot-designer.pages.dev",
-    gradient: "from-rose-950 via-pink-950 to-slate-950",
-    accentColor: "#f472b6",
-    glowColor: "rgba(244, 114, 182, 0.18)",
-    icon: "📱",
     status: "live",
   },
 ];
